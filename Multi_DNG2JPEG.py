@@ -7,7 +7,7 @@ import rawpy
 
 ##### 아래의 입력값을 넣어주세요 ####
 startNo = 582 
-endNo = 585
+endNo = 633
 compressure = 90
 ##################################
 for i in range(startNo, endNo+1):
@@ -24,3 +24,5 @@ for i in range(startNo, endNo+1):
 # cv2.imwrite(f'.\imageFile\postProcessImage\DJI_0{i}.bmp', rgb)
 
 # 작성일 : 2023.4.10.
+# 색상이 이상하게 나온다. RGB 컬러 변환으로 생기는 현상으로 생각됨. 푸르게 나옴
+# update 필요 
