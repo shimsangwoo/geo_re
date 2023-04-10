@@ -4,7 +4,7 @@ import rawpy
 
 # DNG 파일은 압축될 수 있으므로(무손실 형식일지라도) 먼저 dng 이미지를 디코딩해야 합니다.
 # https://pypi.org/project/rawpy/
-path = '.\imageFile\DJI_0583.DNG'    
+path = '.\imageProcessing\imageFile\DJI_0583.DNG'    
 with rawpy.imread(path) as raw:
     rgb = raw.postprocess()
 
@@ -24,7 +24,7 @@ plt.show()
 transImage2 = cv2.cvtColor(rgb, cv2.COLOR_BGR2RGB)
 
 # # 결과값 저장하기
-cv2.imwrite('.\imageFile\DJI_0583666.PNG', transImage2,
+cv2.imwrite('.imageProcessing\imageFile\DJI_0583666.PNG', transImage2,
             [cv2.IMWRITE_PNG_COMPRESSION, 5])
 # cv2.imwrite('.\imageFile\DJI_0583.jpg', rgb,
 #             [cv2.IMWRITE_JPEG_QUALITY,90])
